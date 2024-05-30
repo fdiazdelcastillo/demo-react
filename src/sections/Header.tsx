@@ -3,8 +3,6 @@ import Logo from "./../assets/images/Logo omnitrek.png";
 import React from "react";
 import { Link } from "react-router-dom";
 
-type Component<Props extends Object> = (props: Props) => React.ReactNode;
-
 type HeaderProps = {};
 
 type MenuOptionsLink = {

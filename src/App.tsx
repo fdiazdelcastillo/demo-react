@@ -1,14 +1,12 @@
 import React from "react";
 import "./App.css";
 import Header from "./sections/Header";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import ContactUs from "./pages/ContactUs";
-
-type AppProps = {};
 
 const App = () => {
   return (
