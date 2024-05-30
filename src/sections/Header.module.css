@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    flex: 2;
+    .img {
+      aspect-ratio: 448 / 154;
+      width: 150px;
+    }
+  }
+  .navbar {
+    flex: 8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    .link {
+      text-decoration: none;
+    }
+  }
+  .button {
+    flex: 2;
+  }
+}
