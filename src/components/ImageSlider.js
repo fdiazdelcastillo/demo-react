@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ images, titles }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -20,8 +20,9 @@ const ImageSlider = ({ images }) => {
     <div className={styles.imageSlider}>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index}>
+          <div key={index} className={styles.imageBox}>
             <img src={image} alt={`Slide ${index}`} />
+            <div className={styles.titles}>{titles[index]}</div>
           </div>
         ))}
       </Slider>
