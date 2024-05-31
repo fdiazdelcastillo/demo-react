@@ -6,15 +6,24 @@ import SlideImg3 from "./../assets/images/omnitrek-pensamos-diferente.webp";
 
 const Home = () => {
   const images = [SlideImg2, SlideImg1, SlideImg3];
-  const titles = [
-    "Lleva tu nego  cio al siguiente nivel",
-    "Desarrollamos Estrategias Digitales Vanguardistas",
-    "Pensamos Diferente",
+
+  const texts = [
+    {
+      title: "Lleva tu negocio al siguiente nivel",
+      complement: "",
+      button: "Compartamos",
+    },
+    {
+      title: "Desarrollamos Estrategias Digitales Vanguardistas",
+      complement: "Para Potenciar Tu Rentabilidad",
+      button: "Descubre cómo",
+    },
+    { title: "Pensamos Diferente", complement: "", button: "Conócenos" },
   ];
   return (
     <div className={styles.container}>
       Home
-      <ImageSlider images={images} titles={titles} />
+      <ImageSlider images={images} texts={texts} />
     </div>
   );
 };
