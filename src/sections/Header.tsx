@@ -1,7 +1,8 @@
 import styles from "./Header.module.css";
 import Logo from "./../assets/images/Logo omnitrek.png";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import MenuButton from "./../assets/images/MenuButton.svg";
 
 type HeaderProps = {};
 
@@ -33,6 +34,10 @@ for (let i = 0; i < menuOptions.length; i++) {
 }
 
 const Header = (props: HeaderProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
@@ -41,6 +46,17 @@ const Header = (props: HeaderProps) => {
         </Link>
       </div>
       <div className={styles.navbar}>{menuList}</div>
+      <div className={styles.hamburgerMenu}>
+        <div className={styles.hMButton} onClick={toggleMenu}>
+          <img src={MenuButton} alt="Menu Button" width={30} height={30} />
+        </div>
+        <div
+          className={`${styles.hMBox} ${isOpen ? styles.open : styles.closed}`}
+        >
+          {menuList}
+        </div>
+      </div>
+
       <div className={styles.button}>Button</div>
     </div>
   );
