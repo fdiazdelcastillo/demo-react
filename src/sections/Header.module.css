@@ -19,8 +19,23 @@
   }
   .button {
     flex: 2;
+    color: #40c0cb;
+    background: #ffffff;
+    padding: 7px 16px;
+    border: 2px solid #40c0cb;
+    border-radius: 30px;
+    font-size: 18px;
+    text-align: center;
   }
-
+  .button:hover {
+    color: #ffffff;
+    background: #40c0cb;
+    padding: 7px 16px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    font-size: 18px;
+    text-align: center;
+  }
   .hamburgerMenu {
     display: none;
   }

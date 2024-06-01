@@ -1,5 +1,59 @@
 .container {
+  background: #262626;
+  padding: 112px 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 30px;
+  .area1,
+  .area2,
+  .area3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .area1 {
+    flex: 3;
+  }
+  .area2 {
+    flex: 6;
+  }
+  .area3 {
+    flex: 3;
+  }
+  .title {
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .texts {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+  }
+  .texts li {
+    list-style-type: none;
+  }
+  .message {
+  }
+  .servicesBox {
+    display: flex;
+    gap: 10px;
+  }
+  .services {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .button {
+    display: flex;
+  }
+}
+
+@media (width <= 440px) {
+  .container {
+    flex-direction: column;
+    .servicesBox {
+      flex-direction: column;
+    }
+  }
 }

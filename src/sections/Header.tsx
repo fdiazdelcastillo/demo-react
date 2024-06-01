@@ -3,6 +3,7 @@ import Logo from "./../assets/images/Logo omnitrek.png";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MenuButton from "./../assets/images/MenuButton.svg";
+import Button from "../components/Button";
 
 type HeaderProps = {};
 
@@ -56,8 +57,12 @@ const Header = (props: HeaderProps) => {
           {menuList}
         </div>
       </div>
-
-      <div className={styles.button}>Button</div>
+      <Button
+        text="Compartamos"
+        color="#ffffff"
+        bg="#40c0cb"
+        padding="7px 16px"
+      />
     </div>
   );
 };
