@@ -57,12 +57,14 @@ const Header = (props: HeaderProps) => {
           {menuList}
         </div>
       </div>
-      <Button
-        text="Compartamos"
-        color="#ffffff"
-        bg="#40c0cb"
-        padding="7px 16px"
-      />
+      <div className={styles.button}>
+        <Button
+          text="Compartamos"
+          color="#ffffff"
+          bg="#40c0cb"
+          padding="7px 16px"
+        />
+      </div>
     </div>
   );
 };
