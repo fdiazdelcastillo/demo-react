@@ -11,7 +11,7 @@
     .texts {
       position: absolute;
       color: #ffffff;
-      font-size: 39px;
+      font-size: var(--slider-fs);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,13 +20,13 @@
       text-align: center;
       width: 100%;
       height: 653px;
-      .complement {
-        font-size: 24px;
+      .complement,
+      .button {
+        font-size: calc(var(--slider-fs) * (60 / 100));
       }
       .button {
         background-color: rgb(64, 192, 203);
         border-radius: 30px;
-        font-size: 24px;
         padding: 14px 30px;
       }
     }
@@ -37,7 +37,23 @@
 }
 
 .imageSlider img {
+  aspect-ratio: 1920 / 1282;
   max-width: 100%;
   height: auto;
   margin: auto;
+}
+
+@media (width <= 440px) {
+  .imageSlider {
+    .imageBox {
+      .texts {
+        --slider-fs: 28px;
+        .complement,
+        .button {
+          --slider-fs: 28px;
+          font-size: calc(var(--slider-fs) * (60 / 100));
+        }
+      }
+    }
+  }
 }
