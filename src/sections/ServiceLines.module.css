@@ -1,0 +1,47 @@
+.container {
+  padding: 80px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  .intro {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .title {
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .description {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  .serviceLines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+@media (width <= 440px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    .intro {
+      max-width: 100%;
+    }
+    .serviceLines {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+}
